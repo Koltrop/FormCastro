@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форм</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+    <form method="post" class="container col-3">
+
+        <div class="Name form-group">
+            <label for="name">ФИО</label>
+            <input type="text" placeholder="ФИО" id="name" class="form-control" />
+            <br/>
+        </div>
+        <br/>
+
+
+
+        <div class="Birthday form-group">
+            <label for="birthday">Дата рождения</label>
+            <input type="date" id="birthday" class="form-control" />
+            <br/>
+        </div>
+        <br/>
+
+
+        <div class="Phone form-group">
+            <label for="phone">Номер телефона</label>
+            <input type="text" id="phone" class="form-control" />
+            <br/>
+        </div>
+        <br/>
+
+
+
+        <div class="Inn form-group">
+            <label for="inn">ИНН</label>
+            <input type="text" id="inn" class="form-control" />
+            <br/>
+        </div>
+        <br/>
+
+
+
+        <div class="Email form-group">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email@example.com" id="email" class="form-control" />
+            <br/>
+        </div>
+        <br/>
+
+
+
+        <div class="Place">
+            <label for="place">Место прохождения</label>
+            <select id="place" class="form-control">
+                <option>Moscu</option>
+                <option>San Peterburgo</option>
+            </select>
+            <br/>
+        </div>
+        <br/>
+
+
+
+        <div class="Date form-group">
+            <label for="date">Дата и время записи</label>
+            <input type="datetime-local" id="date" class="form-control" />
+            <br/>
+        </div>
+        <br/>
+
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+    <script src="index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
