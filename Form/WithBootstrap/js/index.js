@@ -20,11 +20,11 @@ Name.addEventListener('input', function() {
         if (!!divname.querySelector('span')) {
             let del = divname.querySelector('span');
             del.remove();
-            Name.className = '';
+            Name.className = 'form-control';
             button.disabled = false;
         }
     } else {
-        Name.className = 'invalid';
+        Name.className += ' invalid';
         if (!!!divname.querySelector('span')) {
             let message = document.createElement('span');
             let txtMessage = document.createTextNode('Раскладка «кириллица». Может содержать «-», « ».');
@@ -54,7 +54,7 @@ Inn.addEventListener('input', function() {
         }
         button.disabled = true;
     } else {
-        Inn.className = '';
+        Inn.className = 'form-control';
         if (!!divInn.querySelector('span')) {
             let del = divInn.querySelector('span');
             del.remove();
@@ -80,7 +80,7 @@ function revisionName(e) {
     let divName = form.querySelector('.Name');
 
     if (name.value == 0) {
-        name.className = 'invalid';
+        name.className += ' invalid';
         e.preventDefault();
         if (!!!divName.querySelector('span')) {
             let message = document.createElement('span');
@@ -110,7 +110,7 @@ function revisionBirthday(e) {
     let divBirthday = form.querySelector('.Birthday');
 
     if (birthday.value == 0) {
-        birthday.className = 'invalid';
+        birthday.className += ' invalid';
         e.preventDefault();
         if (!!!divBirthday.querySelector('span')) {
             let message = document.createElement('span');
@@ -144,7 +144,7 @@ function revisionInn(e) {
     let divInn = form.querySelector('.Inn');
 
     if (inn.value.length != 12 && inn.value.length != 0) {
-        inn.className = 'invalid';
+        inn.className += ' invalid';
         e.preventDefault();
         if (!!!divInn.querySelector('span')) {
             let message = document.createElement('span');
@@ -163,7 +163,7 @@ function revisionEmail(e) {
     let divEmail = form.querySelector('.Email');
 
     if (email.value == 0) {
-        email.className = 'invalid';
+        email.className += ' invalid';
         e.preventDefault();
         if (!!!divEmail.querySelector('span')) {
             let message = document.createElement('span');
@@ -182,7 +182,7 @@ function revisionEmail(e) {
                 del.remove();
             }
         } else {
-            email.className = 'invalid';
+            email.className += ' invalid';
             if (!!!divEmail.querySelector('span')) {
                 let message = document.createElement('span');
                 let txtMessage = document.createTextNode('Неправильно Email');
@@ -201,7 +201,7 @@ function revisionDate(e) {
     let divDate = form.querySelector('.Date');
 
     if (date.value == 0) {
-        date.className = 'invalid';
+        date.className += ' invalid';
         e.preventDefault();
         if (!!!divDate.querySelector('span')) {
             let message = document.createElement('span');
@@ -256,7 +256,7 @@ function revisionPhone(e) {
     let regex = /^[7-8]\(9[0-9]{2}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}$/i;
     if (phone.value != 0) {
         if (!regex.test(phone.value)) {
-            phone.className = 'invalid';
+            phone.className += ' invalid';
             e.preventDefault();
             if (!!!divPhone.querySelector('span')) {
                 let message = document.createElement('span');
